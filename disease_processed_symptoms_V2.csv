@@ -1,0 +1,322 @@
+disease,symptom
+Fungal infection,itching
+Fungal infection, skin rash
+Allergy, continuous sneezing
+Allergy, shivering
+GERD, stomach pain
+GERD, acidity
+Chronic cholestasis,itching
+Chronic cholestasis, vomiting
+Drug Reaction,itching
+Drug Reaction, skin rash
+Peptic ulcer disease, vomiting
+Peptic ulcer disease, indigestion
+AIDS, muscle wasting
+AIDS, patches in throat
+Diabetes , fatigue
+Diabetes , weight loss
+Gastroenteritis, vomiting
+Gastroenteritis, sunken eyes
+Bronchial Asthma, fatigue
+Bronchial Asthma, cough
+Hypertension , headache
+Hypertension , chest pain
+Migraine, acidity
+Migraine, indigestion
+Cervical spondylosis, back pain
+Cervical spondylosis, weakness in limbs
+Paralysis (brain hemorrhage), vomiting
+Paralysis (brain hemorrhage), headache
+Jaundice,itching
+Jaundice, vomiting
+Malaria, chills
+Malaria, vomiting
+Chicken pox,itching
+Chicken pox, skin rash
+Dengue, skin rash
+Dengue, chills
+Typhoid, chills
+hepatitis A, joint pain
+hepatitis A, vomiting
+Hepatitis B,itching
+Hepatitis B, fatigue
+Hepatitis C, fatigue
+Hepatitis C, yellowish skin
+Hepatitis D, joint pain
+Hepatitis D, vomiting
+Hepatitis E, joint pain
+Hepatitis E, vomiting
+Alcoholic hepatitis, vomiting
+Alcoholic hepatitis, yellowish skin
+Tuberculosis, chills
+Tuberculosis, vomiting
+Common Cold, continuous sneezing
+Common Cold, chills
+Pneumonia, chills
+Pneumonia, fatigue
+Dimorphic hemmorhoids(piles), constipation
+Dimorphic hemmorhoids(piles), pain during bowel movements
+Heart attack, vomiting
+Heart attack, breathlessness
+Varicose veins, fatigue
+Varicose veins, cramps
+Hypothyroidism, fatigue
+Hypothyroidism, weight gain
+Hyperthyroidism, fatigue
+Hyperthyroidism, mood swings
+Hypoglycemia, vomiting
+Hypoglycemia, fatigue
+Osteoarthristis, joint pain
+Osteoarthristis, neck pain
+Arthritis, muscle weakness
+Arthritis, stiff neck
+(vertigo) Paroxysmal  Positional Vertigo, vomiting
+(vertigo) Paroxysmal  Positional Vertigo, headache
+Acne, skin rash
+Acne, pus filled pimples
+Urinary tract infection, burning micturition
+Urinary tract infection, bladder discomfort
+Psoriasis, skin rash
+Psoriasis, joint pain
+Impetigo, skin rash
+Impetigo, high fever
+Fungal infection, nodal skin eruptions
+Allergy, chills
+GERD, ulcers on tongue
+Chronic cholestasis, yellowish skin
+Drug Reaction, stomach pain
+Peptic ulcer disease, loss of appetite
+AIDS, high fever
+Diabetes , restlessness
+Gastroenteritis, dehydration
+Bronchial Asthma, high fever
+Hypertension , dizziness
+Migraine, headache
+Cervical spondylosis, neck pain
+Paralysis (brain hemorrhage), weakness of one body side
+Jaundice, fatigue
+Malaria, high fever
+Chicken pox, fatigue
+Dengue, joint pain
+Typhoid, vomiting
+Typhoid, fatigue
+hepatitis A, yellowish skin
+Hepatitis B, lethargy
+Hepatitis C, nausea
+Hepatitis D, fatigue
+Hepatitis E, fatigue
+Alcoholic hepatitis, abdominal pain
+Tuberculosis, fatigue
+Common Cold, fatigue
+Pneumonia, cough
+Dimorphic hemmorhoids(piles), pain in anal region
+Heart attack, sweating
+Varicose veins, bruising
+Hypothyroidism, cold hands and feets
+Hyperthyroidism, weight loss
+Hypoglycemia, anxiety
+Osteoarthristis, knee pain
+Arthritis, swelling joints
+(vertigo) Paroxysmal  Positional Vertigo, nausea
+Acne, blackheads
+Urinary tract infection, foul smell of urine
+Psoriasis, skin peeling
+Impetigo, blister
+Fungal infection, dischromic  patches
+Allergy, watering from eyes
+GERD, vomiting
+Chronic cholestasis, nausea
+Drug Reaction, burning micturition
+Peptic ulcer disease, abdominal pain
+AIDS, extra marital contacts
+Diabetes , lethargy
+Gastroenteritis, diarrhoea
+Bronchial Asthma, breathlessness
+Hypertension , loss of balance
+Migraine, blurred and distorted vision
+Cervical spondylosis, dizziness
+Paralysis (brain hemorrhage), altered sensorium
+Jaundice, weight loss
+Malaria, sweating
+Chicken pox, lethargy
+Dengue, vomiting
+Typhoid, high fever
+hepatitis A, dark urine
+Hepatitis B, yellowish skin
+Hepatitis C, loss of appetite
+Hepatitis D, yellowish skin
+Hepatitis E, high fever
+Alcoholic hepatitis, swelling of stomach
+Tuberculosis, weight loss
+Common Cold, cough
+Pneumonia, high fever
+Dimorphic hemmorhoids(piles), bloody stool
+Heart attack, chest pain
+Varicose veins, obesity
+Hypothyroidism, mood swings
+Hyperthyroidism, restlessness
+Hypoglycemia, sweating
+Osteoarthristis, hip joint pain
+Arthritis, movement stiffness
+(vertigo) Paroxysmal  Positional Vertigo, spinning movements
+Acne, scurring
+Urinary tract infection, continuous feel of urine
+Psoriasis, silver like dusting
+Impetigo, red sore around nose
+GERD, cough
+Chronic cholestasis, loss of appetite
+Drug Reaction, spotting  urination
+Peptic ulcer disease, passage of gases
+Diabetes , irregular sugar level
+Bronchial Asthma, family history
+Hypertension , lack of concentration
+Migraine, excessive hunger
+Cervical spondylosis, loss of balance
+Jaundice, high fever
+Malaria, headache
+Chicken pox, high fever
+Dengue, fatigue
+Typhoid, headache
+hepatitis A, nausea
+Hepatitis B, dark urine
+Hepatitis C, yellowing of eyes
+Hepatitis D, dark urine
+Hepatitis E, yellowish skin
+Alcoholic hepatitis, distention of abdomen
+Tuberculosis, cough
+Common Cold, high fever
+Pneumonia, breathlessness
+Dimorphic hemmorhoids(piles), irritation in anus
+Varicose veins, swollen legs
+Hypothyroidism, lethargy
+Hyperthyroidism, sweating
+Hypoglycemia, headache
+Osteoarthristis, swelling joints
+Arthritis, painful walking
+(vertigo) Paroxysmal  Positional Vertigo, loss of balance
+Psoriasis, small dents in nails
+Impetigo, yellow crust ooze
+GERD, chest pain
+Chronic cholestasis, abdominal pain
+Peptic ulcer disease, internal itching
+Diabetes , blurred and distorted vision
+Bronchial Asthma, mucoid sputum
+Migraine, stiff neck
+Jaundice, yellowish skin
+Malaria, nausea
+Chicken pox, headache
+Dengue, high fever
+Typhoid, nausea
+hepatitis A, loss of appetite
+Hepatitis B, loss of appetite
+Hepatitis C, family history
+Hepatitis D, nausea
+Hepatitis E, dark urine
+Alcoholic hepatitis, history of alcohol consumption
+Tuberculosis, high fever
+Common Cold, headache
+Pneumonia, sweating
+Varicose veins, swollen blood vessels
+Hypothyroidism, dizziness
+Hyperthyroidism, diarrhoea
+Hypoglycemia, nausea
+Osteoarthristis, painful walking
+(vertigo) Paroxysmal  Positional Vertigo, unsteadiness
+Psoriasis, inflammatory nails
+Chronic cholestasis, yellowing of eyes
+Diabetes , obesity
+Migraine, depression
+Jaundice, dark urine
+Malaria, diarrhoea
+Chicken pox, loss of appetite
+Dengue, headache
+Typhoid, constipation
+hepatitis A, abdominal pain
+Hepatitis B, abdominal pain
+Hepatitis D, loss of appetite
+Hepatitis E, nausea
+Alcoholic hepatitis, fluid overload
+Tuberculosis, breathlessness
+Common Cold, swelled lymph nodes
+Pneumonia, malaise
+Varicose veins, prominent veins on calf
+Hypothyroidism, puffy face and eyes
+Hyperthyroidism, fast heart rate
+Hypoglycemia, blurred and distorted vision
+Diabetes , excessive hunger
+Migraine, irritability
+Jaundice, abdominal pain
+Malaria, muscle pain
+Chicken pox, mild fever
+Dengue, nausea
+Typhoid, abdominal pain
+hepatitis A, diarrhoea
+Hepatitis B, yellow urine
+Hepatitis D, abdominal pain
+Hepatitis E, loss of appetite
+Tuberculosis, sweating
+Common Cold, malaise
+Pneumonia, phlegm
+Hypothyroidism, enlarged thyroid
+Hyperthyroidism, excessive hunger
+Hypoglycemia, excessive hunger
+Diabetes , increased appetite
+Migraine, visual disturbances
+Chicken pox, swelled lymph nodes
+Dengue, loss of appetite
+Typhoid, diarrhoea
+hepatitis A, mild fever
+Hepatitis B, yellowing of eyes
+Hepatitis D, yellowing of eyes
+Hepatitis E, abdominal pain
+Tuberculosis, loss of appetite
+Common Cold, phlegm
+Pneumonia, chest pain
+Hypothyroidism, brittle nails
+Hyperthyroidism, muscle weakness
+Hypoglycemia, drying and tingling lips
+Diabetes , polyuria
+Chicken pox, malaise
+Dengue, pain behind the eyes
+Typhoid, toxic look (typhos)
+hepatitis A, yellowing of eyes
+Hepatitis B, malaise
+Hepatitis E, yellowing of eyes
+Tuberculosis, mild fever
+Common Cold, throat irritation
+Pneumonia, fast heart rate
+Hypothyroidism, swollen extremeties
+Hyperthyroidism, irritability
+Hypoglycemia, slurred speech
+Chicken pox, red spots over body
+Dengue, back pain
+Typhoid, belly pain
+hepatitis A, muscle pain
+Hepatitis B, receiving blood transfusion
+Hepatitis E, acute liver failure
+Tuberculosis, yellowing of eyes
+Common Cold, redness of eyes
+Pneumonia, rusty sputum
+Hypothyroidism, depression
+Hyperthyroidism, abnormal menstruation
+Hypoglycemia, irritability
+Dengue, malaise
+Hepatitis B, receiving unsterile injections
+Hepatitis E, coma
+Tuberculosis, swelled lymph nodes
+Common Cold, sinus pressure
+Hypothyroidism, irritability
+Hypoglycemia, palpitations
+Dengue, muscle pain
+Hepatitis E, stomach bleeding
+Tuberculosis, malaise
+Common Cold, runny nose
+Hypothyroidism, abnormal menstruation
+Dengue, red spots over body
+Tuberculosis, phlegm
+Common Cold, congestion
+Tuberculosis, chest pain
+Common Cold, chest pain
+Tuberculosis, blood in sputum
+Common Cold, loss of smell
+Common Cold, muscle pain

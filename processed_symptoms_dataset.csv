@@ -1,0 +1,322 @@
+disease,symptom,processed_symptom
+Fungal infection,itching,itch
+Fungal infection, skin rash,  skin rash
+Allergy, continuous sneezing,  continuous sneezing
+Allergy, shivering,  shiver
+GERD, stomach pain,  stomach pain
+GERD, acidity,  acidity
+Chronic cholestasis,itching,itch
+Chronic cholestasis, vomiting,  vomit
+Drug Reaction,itching,itch
+Drug Reaction, skin rash,  skin rash
+Peptic ulcer disease, vomiting,  vomit
+Peptic ulcer disease, indigestion,  indigestion
+AIDS, muscle wasting,  muscle waste
+AIDS, patches in throat,  patch throat
+Diabetes , fatigue,  fatigue
+Diabetes , weight loss,  weight loss
+Gastroenteritis, vomiting,  vomit
+Gastroenteritis, sunken eyes,  sink eye
+Bronchial Asthma, fatigue,  fatigue
+Bronchial Asthma, cough,  cough
+Hypertension , headache,  headache
+Hypertension , chest pain,  chest pain
+Migraine, acidity,  acidity
+Migraine, indigestion,  indigestion
+Cervical spondylosis, back pain,  pain
+Cervical spondylosis, weakness in limbs,  weakness limb
+Paralysis (brain hemorrhage), vomiting,  vomit
+Paralysis (brain hemorrhage), headache,  headache
+Jaundice,itching,itch
+Jaundice, vomiting,  vomit
+Malaria, chills,  chill
+Malaria, vomiting,  vomit
+Chicken pox,itching,itch
+Chicken pox, skin rash,  skin rash
+Dengue, skin rash,  skin rash
+Dengue, chills,  chill
+Typhoid, chills,  chill
+hepatitis A, joint pain,  joint pain
+hepatitis A, vomiting,  vomit
+Hepatitis B,itching,itch
+Hepatitis B, fatigue,  fatigue
+Hepatitis C, fatigue,  fatigue
+Hepatitis C, yellowish skin,  yellowish skin
+Hepatitis D, joint pain,  joint pain
+Hepatitis D, vomiting,  vomit
+Hepatitis E, joint pain,  joint pain
+Hepatitis E, vomiting,  vomit
+Alcoholic hepatitis, vomiting,  vomit
+Alcoholic hepatitis, yellowish skin,  yellowish skin
+Tuberculosis, chills,  chill
+Tuberculosis, vomiting,  vomit
+Common Cold, continuous sneezing,  continuous sneezing
+Common Cold, chills,  chill
+Pneumonia, chills,  chill
+Pneumonia, fatigue,  fatigue
+Dimorphic hemmorhoids(piles), constipation,  constipation
+Dimorphic hemmorhoids(piles), pain during bowel movements,  pain bowel movement
+Heart attack, vomiting,  vomit
+Heart attack, breathlessness,  breathlessness
+Varicose veins, fatigue,  fatigue
+Varicose veins, cramps,  cramp
+Hypothyroidism, fatigue,  fatigue
+Hypothyroidism, weight gain,  weight gain
+Hyperthyroidism, fatigue,  fatigue
+Hyperthyroidism, mood swings,  mood swing
+Hypoglycemia, vomiting,  vomit
+Hypoglycemia, fatigue,  fatigue
+Osteoarthristis, joint pain,  joint pain
+Osteoarthristis, neck pain,  neck pain
+Arthritis, muscle weakness,  muscle weakness
+Arthritis, stiff neck,  stiff neck
+(vertigo) Paroxysmal  Positional Vertigo, vomiting,  vomit
+(vertigo) Paroxysmal  Positional Vertigo, headache,  headache
+Acne, skin rash,  skin rash
+Acne, pus filled pimples,  pus fill pimple
+Urinary tract infection, burning micturition,  burn micturition
+Urinary tract infection, bladder discomfort,  bladder discomfort
+Psoriasis, skin rash,  skin rash
+Psoriasis, joint pain,  joint pain
+Impetigo, skin rash,  skin rash
+Impetigo, high fever,  high fever
+Fungal infection, nodal skin eruptions,  nodal skin eruption
+Allergy, chills,  chill
+GERD, ulcers on tongue,  ulcer tongue
+Chronic cholestasis, yellowish skin,  yellowish skin
+Drug Reaction, stomach pain,  stomach pain
+Peptic ulcer disease, loss of appetite,  loss appetite
+AIDS, high fever,  high fever
+Diabetes , restlessness,  restlessness
+Gastroenteritis, dehydration,  dehydration
+Bronchial Asthma, high fever,  high fever
+Hypertension , dizziness,  dizziness
+Migraine, headache,  headache
+Cervical spondylosis, neck pain,  neck pain
+Paralysis (brain hemorrhage), weakness of one body side,  weakness body
+Jaundice, fatigue,  fatigue
+Malaria, high fever,  high fever
+Chicken pox, fatigue,  fatigue
+Dengue, joint pain,  joint pain
+Typhoid, vomiting,  vomit
+Typhoid, fatigue,  fatigue
+hepatitis A, yellowish skin,  yellowish skin
+Hepatitis B, lethargy,  lethargy
+Hepatitis C, nausea,  nausea
+Hepatitis D, fatigue,  fatigue
+Hepatitis E, fatigue,  fatigue
+Alcoholic hepatitis, abdominal pain,  abdominal pain
+Tuberculosis, fatigue,  fatigue
+Common Cold, fatigue,  fatigue
+Pneumonia, cough,  cough
+Dimorphic hemmorhoids(piles), pain in anal region,  pain anal region
+Heart attack, sweating,  sweating
+Varicose veins, bruising,  bruise
+Hypothyroidism, cold hands and feets,  cold hand feet
+Hyperthyroidism, weight loss,  weight loss
+Hypoglycemia, anxiety,  anxiety
+Osteoarthristis, knee pain,  knee pain
+Arthritis, swelling joints,  swell joint
+(vertigo) Paroxysmal  Positional Vertigo, nausea,  nausea
+Acne, blackheads,  blackhead
+Urinary tract infection, foul smell of urine,  foul smell urine
+Psoriasis, skin peeling,  skin peeling
+Impetigo, blister,  blister
+Fungal infection, dischromic  patches,  dischromic   patch
+Allergy, watering from eyes,  water eye
+GERD, vomiting,  vomit
+Chronic cholestasis, nausea,  nausea
+Drug Reaction, burning micturition,  burn micturition
+Peptic ulcer disease, abdominal pain,  abdominal pain
+AIDS, extra marital contacts,  extra marital contact
+Diabetes , lethargy,  lethargy
+Gastroenteritis, diarrhoea,  diarrhoea
+Bronchial Asthma, breathlessness,  breathlessness
+Hypertension , loss of balance,  loss balance
+Migraine, blurred and distorted vision,  blur distort vision
+Cervical spondylosis, dizziness,  dizziness
+Paralysis (brain hemorrhage), altered sensorium,  altered sensorium
+Jaundice, weight loss,  weight loss
+Malaria, sweating,  sweating
+Chicken pox, lethargy,  lethargy
+Dengue, vomiting,  vomit
+Typhoid, high fever,  high fever
+hepatitis A, dark urine,  dark urine
+Hepatitis B, yellowish skin,  yellowish skin
+Hepatitis C, loss of appetite,  loss appetite
+Hepatitis D, yellowish skin,  yellowish skin
+Hepatitis E, high fever,  high fever
+Alcoholic hepatitis, swelling of stomach,  swelling stomach
+Tuberculosis, weight loss,  weight loss
+Common Cold, cough,  cough
+Pneumonia, high fever,  high fever
+Dimorphic hemmorhoids(piles), bloody stool,  bloody stool
+Heart attack, chest pain,  chest pain
+Varicose veins, obesity,  obesity
+Hypothyroidism, mood swings,  mood swing
+Hyperthyroidism, restlessness,  restlessness
+Hypoglycemia, sweating,  sweating
+Osteoarthristis, hip joint pain,  hip joint pain
+Arthritis, movement stiffness,  movement stiffness
+(vertigo) Paroxysmal  Positional Vertigo, spinning movements,  spin movement
+Acne, scurring,  scurre
+Urinary tract infection, continuous feel of urine,  continuous feel urine
+Psoriasis, silver like dusting,  silver like dust
+Impetigo, red sore around nose,  red sore nose
+GERD, cough,  cough
+Chronic cholestasis, loss of appetite,  loss appetite
+Drug Reaction, spotting  urination,  spot   urination
+Peptic ulcer disease, passage of gases,  passage gas
+Diabetes , irregular sugar level,  irregular sugar level
+Bronchial Asthma, family history,  family history
+Hypertension , lack of concentration,  lack concentration
+Migraine, excessive hunger,  excessive hunger
+Cervical spondylosis, loss of balance,  loss balance
+Jaundice, high fever,  high fever
+Malaria, headache,  headache
+Chicken pox, high fever,  high fever
+Dengue, fatigue,  fatigue
+Typhoid, headache,  headache
+hepatitis A, nausea,  nausea
+Hepatitis B, dark urine,  dark urine
+Hepatitis C, yellowing of eyes,  yellow eye
+Hepatitis D, dark urine,  dark urine
+Hepatitis E, yellowish skin,  yellowish skin
+Alcoholic hepatitis, distention of abdomen,  distention abdoman
+Tuberculosis, cough,  cough
+Common Cold, high fever,  high fever
+Pneumonia, breathlessness,  breathlessness
+Dimorphic hemmorhoids(piles), irritation in anus,  irritation anus
+Varicose veins, swollen legs,  swollen leg
+Hypothyroidism, lethargy,  lethargy
+Hyperthyroidism, sweating,  sweating
+Hypoglycemia, headache,  headache
+Osteoarthristis, swelling joints,  swell joint
+Arthritis, painful walking,  painful walking
+(vertigo) Paroxysmal  Positional Vertigo, loss of balance,  loss balance
+Psoriasis, small dents in nails,  small dent nail
+Impetigo, yellow crust ooze,  yellow crust ooze
+GERD, chest pain,  chest pain
+Chronic cholestasis, abdominal pain,  abdominal pain
+Peptic ulcer disease, internal itching,  internal itching
+Diabetes , blurred and distorted vision,  blur distort vision
+Bronchial Asthma, mucoid sputum,  mucoid sputum
+Migraine, stiff neck,  stiff neck
+Jaundice, yellowish skin,  yellowish skin
+Malaria, nausea,  nausea
+Chicken pox, headache,  headache
+Dengue, high fever,  high fever
+Typhoid, nausea,  nausea
+hepatitis A, loss of appetite,  loss appetite
+Hepatitis B, loss of appetite,  loss appetite
+Hepatitis C, family history,  family history
+Hepatitis D, nausea,  nausea
+Hepatitis E, dark urine,  dark urine
+Alcoholic hepatitis, history of alcohol consumption,  history alcohol consumption
+Tuberculosis, high fever,  high fever
+Common Cold, headache,  headache
+Pneumonia, sweating,  sweating
+Varicose veins, swollen blood vessels,  swollen blood vessel
+Hypothyroidism, dizziness,  dizziness
+Hyperthyroidism, diarrhoea,  diarrhoea
+Hypoglycemia, nausea,  nausea
+Osteoarthristis, painful walking,  painful walking
+(vertigo) Paroxysmal  Positional Vertigo, unsteadiness,  unsteadiness
+Psoriasis, inflammatory nails,  inflammatory nail
+Chronic cholestasis, yellowing of eyes,  yellow eye
+Diabetes , obesity,  obesity
+Migraine, depression,  depression
+Jaundice, dark urine,  dark urine
+Malaria, diarrhoea,  diarrhoea
+Chicken pox, loss of appetite,  loss appetite
+Dengue, headache,  headache
+Typhoid, constipation,  constipation
+hepatitis A, abdominal pain,  abdominal pain
+Hepatitis B, abdominal pain,  abdominal pain
+Hepatitis D, loss of appetite,  loss appetite
+Hepatitis E, nausea,  nausea
+Alcoholic hepatitis, fluid overload,  fluid overload
+Tuberculosis, breathlessness,  breathlessness
+Common Cold, swelled lymph nodes,  swell lymph node
+Pneumonia, malaise,  malaise
+Varicose veins, prominent veins on calf,  prominent vein calf
+Hypothyroidism, puffy face and eyes,  puffy face eye
+Hyperthyroidism, fast heart rate,  fast heart rate
+Hypoglycemia, blurred and distorted vision,  blur distort vision
+Diabetes , excessive hunger,  excessive hunger
+Migraine, irritability,  irritability
+Jaundice, abdominal pain,  abdominal pain
+Malaria, muscle pain,  muscle pain
+Chicken pox, mild fever,  mild fever
+Dengue, nausea,  nausea
+Typhoid, abdominal pain,  abdominal pain
+hepatitis A, diarrhoea,  diarrhoea
+Hepatitis B, yellow urine,  yellow urine
+Hepatitis D, abdominal pain,  abdominal pain
+Hepatitis E, loss of appetite,  loss appetite
+Tuberculosis, sweating,  sweating
+Common Cold, malaise,  malaise
+Pneumonia, phlegm,  phlegm
+Hypothyroidism, enlarged thyroid,  enlarge thyroid
+Hyperthyroidism, excessive hunger,  excessive hunger
+Hypoglycemia, excessive hunger,  excessive hunger
+Diabetes , increased appetite,  increase appetite
+Migraine, visual disturbances,  visual disturbance
+Chicken pox, swelled lymph nodes,  swell lymph node
+Dengue, loss of appetite,  loss appetite
+Typhoid, diarrhoea,  diarrhoea
+hepatitis A, mild fever,  mild fever
+Hepatitis B, yellowing of eyes,  yellow eye
+Hepatitis D, yellowing of eyes,  yellow eye
+Hepatitis E, abdominal pain,  abdominal pain
+Tuberculosis, loss of appetite,  loss appetite
+Common Cold, phlegm,  phlegm
+Pneumonia, chest pain,  chest pain
+Hypothyroidism, brittle nails,  brittle nail
+Hyperthyroidism, muscle weakness,  muscle weakness
+Hypoglycemia, drying and tingling lips,  dry tingle lip
+Diabetes , polyuria,  polyuria
+Chicken pox, malaise,  malaise
+Dengue, pain behind the eyes,  pain eye
+Typhoid, toxic look (typhos),  toxic look ( typhos )
+hepatitis A, yellowing of eyes,  yellow eye
+Hepatitis B, malaise,  malaise
+Hepatitis E, yellowing of eyes,  yellow eye
+Tuberculosis, mild fever,  mild fever
+Common Cold, throat irritation,  throat irritation
+Pneumonia, fast heart rate,  fast heart rate
+Hypothyroidism, swollen extremeties,  swollen extremetie
+Hyperthyroidism, irritability,  irritability
+Hypoglycemia, slurred speech,  slur speech
+Chicken pox, red spots over body,  red spot body
+Dengue, back pain,  pain
+Typhoid, belly pain,  belly pain
+hepatitis A, muscle pain,  muscle pain
+Hepatitis B, receiving blood transfusion,  receive blood transfusion
+Hepatitis E, acute liver failure,  acute liver failure
+Tuberculosis, yellowing of eyes,  yellow eye
+Common Cold, redness of eyes,  redness eye
+Pneumonia, rusty sputum,  rusty sputum
+Hypothyroidism, depression,  depression
+Hyperthyroidism, abnormal menstruation,  abnormal menstruation
+Hypoglycemia, irritability,  irritability
+Dengue, malaise,  malaise
+Hepatitis B, receiving unsterile injections,  receive unsterile injection
+Hepatitis E, coma,  coma
+Tuberculosis, swelled lymph nodes,  swell lymph node
+Common Cold, sinus pressure,  sinus pressure
+Hypothyroidism, irritability,  irritability
+Hypoglycemia, palpitations,  palpitation
+Dengue, muscle pain,  muscle pain
+Hepatitis E, stomach bleeding,  stomach bleeding
+Tuberculosis, malaise,  malaise
+Common Cold, runny nose,  runny nose
+Hypothyroidism, abnormal menstruation,  abnormal menstruation
+Dengue, red spots over body,  red spot body
+Tuberculosis, phlegm,  phlegm
+Common Cold, congestion,  congestion
+Tuberculosis, chest pain,  chest pain
+Common Cold, chest pain,  chest pain
+Tuberculosis, blood in sputum,  blood sputum
+Common Cold, loss of smell,  loss smell
+Common Cold, muscle pain,  muscle pain
