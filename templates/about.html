@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Diagnosify.ai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="static/styleabout.css">
+    <link rel="stylesheet" href="static/styleindex.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{url_for('home')}}" class="logo"><i class="fas fa-robot "></i> Diagnosify<span>.ai</span></a>
+        <div class="menu-icon" id="menuToggle">☰</div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="menu-content" id="menuContent">
+        <div class="close-menu" id="closeMenu">×</div>
+        <a href="{{url_for('home')}}"><i class="fas fa-home"></i> Home</a>
+        <a href="{{url_for('login')}}"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="{{url_for('about')}}" class="active"><i class="fas fa-info-circle"></i> About</a>
+        <a href="{{url_for('interface')}}"><i class="fas fa-stethoscope"></i> Services</a>
+    
+    </div>
+
+    <div class="about-container">
+        <div class="about-header">
+            <h1 class="about-title">About Diagnosify.ai</h1>
+            <p class="about-subtitle">Revolutionizing healthcare through artificial intelligence and precision diagnostics</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-card">
+                <h2 class="card-title"><i class="fas fa-bullseye"></i> Our Mission</h2>
+                <p>At Diagnosify.ai, we're committed to transforming healthcare by providing accurate, AI-powered diagnostic tools that empower both medical professionals and patients. Our mission is to make precision diagnostics accessible to everyone, everywhere.</p>
+            </div>
+
+            <div class="about-card">
+                <h2 class="card-title"><i class="fas fa-lightbulb"></i> Our Technology</h2>
+                <p>Leveraging cutting-edge machine learning algorithms and vast medical datasets, our platform delivers real-time diagnostic suggestions with unprecedented accuracy. Our AI continuously learns from new cases to improve its performance.</p>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-card">
+                <h2 class="card-title"><i class="fas fa-chart-line"></i> Our Impact</h2>
+                <p>Since our launch, Diagnosify.ai has assisted in over 2 million diagnoses across 15 countries. Our technology has demonstrated 98.7% accuracy in preliminary testing, significantly reducing diagnostic errors and improving patient outcomes.</p>
+            </div>
+
+            <div class="about-card">
+                <h2 class="card-title"><i class="fas fa-shield-alt"></i> Data Privacy</h2>
+                <p>We adhere to the highest standards of data security and patient confidentiality. All health data is encrypted and anonymized, complying with HIPAA, GDPR, and other global privacy regulations.</p>
+            </div>
+        </div>
+
+   <!----    <div class="team-section">
+            <h2 class="about-title">Meet Our Team</h2>
+            <p class="about-subtitle">World-class experts in AI and medicine working together</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Dr. Sarah Chen" class="member-img">
+                    <h3 class="member-name">Dr. Sarah Chen</h3>
+                    <p class="member-role">Chief Medical Officer</p>
+                    <p class="member-bio">Board-certified radiologist with 15 years of clinical experience and AI research.</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Michael Rodriguez" class="member-img">
+                    <h3 class="member-name">Dr. Michael Rodriguez</h3>
+                    <p class="member-role">Head of AI Research</p>
+                    <p class="member-bio">PhD in Machine Learning from MIT, specializing in medical imaging analysis.</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dr. Priya Patel" class="member-img">
+                    <h3 class="member-name">Dr. Priya Patel</h3>
+                    <p class="member-role">Lead Data Scientist</p>
+                    <p class="member-bio">Expert in neural networks and predictive modeling for healthcare applications.</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Kim" class="member-img">
+                    <h3 class="member-name">David Kim</h3>
+                    <p class="member-role">Chief Technology Officer</p>
+                    <p class="member-bio">Software architect with expertise in building scalable medical platforms.</p>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Diagnosify.ai</h3>
+                <p>Precision healthcare diagnostics powered by artificial intelligence and machine learning technologies.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Research</a>
+                <a href="login.html">Login</a>
+            </div>
+           
+            <div class="footer-column">
+                <h3>Contact</h3>
+
+                <p><i class="fas fa-phone"></i> (800) 555-HEALTH</p>
+                <p><i class="fas fa-envelope"></i> info@diagnosify.ai</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Diagnosify.ai. All rights reserved. </p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const menuContent = document.getElementById('menuContent');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Toggle menu
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+            menuContent.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close menu when clicking overlay
+        menuOverlay.addEventListener('click', () => {
+            closeMenuFunction();
+        });
+
+        // Close menu when clicking X button
+        closeMenu.addEventListener('click', () => {
+            closeMenuFunction();
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenuFunction();
+            }
+        });
+
+        function closeMenuFunction() {
+            menuOverlay.classList.remove('active');
+            menuContent.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close menu when clicking on a menu item
+        const menuItems = document.querySelectorAll('.menu-content a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                closeMenuFunction();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosify.ai - AI-Powered Healthcare Diagnostics</title>
+    <meta name="description" content="AI-powered symptom checker for preliminary health assessments">
+    <meta name="keywords" content="AI healthcare, symptom checker, medical diagnosis, health assistant">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style/styleindex.css">
+    <link rel="stylesheet" href="style/stylemain.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="Diagnosify.ai Home">
+            <i class="fas fa-robot" aria-hidden="true"></i>Diagnosify<span>.ai</span>
+        </a>
+        <button class="menu-icon" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar" aria-label="Sidebar navigation">
+            <nav>
+                <a href="index.html" >
+                    <i class="fas fa-home" aria-hidden="true"></i> Home
+                </a>
+                <a href="login.html">
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Login
+                </a>
+                <a href="about.html">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i> About
+                </a>
+                <a href="main.html" class="active">
+                    <i class="fas fa-stethoscope" aria-hidden="true"></i> Services
+                </a>
+                <a href="#">
+                    <i class="fas fa-book-medical" aria-hidden="true"></i> Resources
+                </a>
+                <a href="#">
+                    <i class="fas fa-headset" aria-hidden="true"></i> Support
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Chat Section -->
+        <main class="chat-section">
+            <div class="model-selector">
+                <label for="model-select" class="sr-only">Select AI Model</label>
+                <select id="model-select" name="models" aria-label="Select AI model for diagnosis">
+                    <option value="" disabled selected>Select AI Model</option>
+                    <option value="lstm">LSTM Neural Network</option>
+                    <option value="adabost">AdaBoost Classifier</option>
+                    <option value="rand_forest">Random Forest</option>
+                    <option value="bert">BERT (Advanced NLP)</option>
+                </select>
+                <div class="model-info-container">
+                    <button class="model-info-btn" id="modelInfoBtn" aria-label="Learn about selected model">
+                      <i class="fas fa-info-circle"></i> Model Details
+                    </button>
+                  </div>
+            </div>
+          
+            <div class="chat-container">
+                <div class="chat-header">
+                    <i class="fas fa-comment-medical" aria-hidden="true"></i>
+                    <h2>AI Health Assistant</h2>
+                </div>
+                
+                <div class="chat-body" id="chatBody">
+                    <div class="message bot-message animate__animated animate__fadeIn">
+                        <p>Hello! I'm Diagnosify.ai, your AI health assistant.</p>
+                        <p>Please describe your symptoms and I'll provide preliminary information about possible conditions.</p>
+                        <p><strong>Remember:</strong> I'm not a substitute for professional medical advice.</p>
+                    </div>
+                    
+                    <!-- Example conversation will be populated here by JavaScript -->
+                </div>
+                
+                <div class="chat-input-container">
+                    <label for="userInput" class="sr-only">Type your message</label>
+                    <input type="text" id="userInput" class="chat-input" placeholder="Describe your symptoms..." aria-label="Type your health concerns">
+                    <button class="send-button" id="sendButton" aria-label="Send message">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="disclaimer" role="alert">
+                <strong>Important:</strong> This AI assistant provides preliminary health information only. 
+                Always consult a healthcare professional for medical advice. In case of emergency, 
+                call your local emergency number immediately.
+            </div>
+        </main>
+    </div>
+    <div class="modal-overlay" id="modelModal">
+        <div class="modal-content">
+          <button class="close-modal" id="closeModal">&times;</button>
+          <h3 id="modalTitle">Model Information</h3>
+          <div id="modalAdvantages">
+            <p>Please select a model first</p>
+          </div>
+        </div>
+      </div>
+
+      
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Diagnosify.ai</h3>
+                <p>Precision healthcare diagnostics powered by artificial intelligence and machine learning technologies.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Research</a>
+                <a href="login.html">Login</a>
+            </div>
+           
+            <div class="footer-column">
+                <h3>Contact</h3>
+
+                <p><i class="fas fa-phone"></i> (800) 555-HEALTH</p>
+                <p><i class="fas fa-envelope"></i> info@diagnosify.ai</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Diagnosify.ai. All rights reserved. </p>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !expanded);
+        });
+
+        // Chat functionality
+        const chatBody = document.getElementById('chatBody');
+        const userInput = document.getElementById('userInput');
+        const sendButton = document.getElementById('sendButton');
+        
+        function addUserMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message user-message animate__animated animate__fadeIn';
+            messageDiv.innerHTML = `<p>${text}</p>`;
+            chatBody.appendChild(messageDiv);
+            userInput.value = '';
+            scrollToBottom();
+            
+            // Show typing indicator
+            showTypingIndicator();
+            
+            // Simulate bot response after delay
+            setTimeout(() => {
+                removeTypingIndicator();
+                addBotResponse(text);
+            }, 1500);
+        }
+        
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot-message typing-indicator';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = '<span></span><span></span><span></span>';
+            chatBody.appendChild(typingDiv);
+            scrollToBottom();
+        }
+        
+        function removeTypingIndicator() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+        
+        function addBotResponse(userMessage) {
+            // In a real app, this would call your AI backend
+            const responses = [
+                "I understand you're experiencing symptoms. Can you tell me more about how long you've had them?",
+                "That sounds concerning. Have you noticed any other symptoms along with this?",
+                "Based on common symptoms, this could relate to several conditions. However, I recommend consulting a doctor for proper diagnosis.",
+                "For the symptoms you described, some possibilities include: <ul><li>Condition A</li><li>Condition B</li></ul> Remember this is not a diagnosis.",
+                "It's important to monitor these symptoms. If they worsen or persist beyond 3 days, please seek medical attention."
+            ];
+            
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message bot-message animate__animated animate__fadeIn';
+            messageDiv.innerHTML = randomResponse;
+            chatBody.appendChild(messageDiv);
+            scrollToBottom();
+        }
+        
+        function scrollToBottom() {
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        
+        // Event listeners
+        sendButton.addEventListener('click', () => {
+            if (userInput.value.trim()) {
+                addUserMessage(userInput.value.trim());
+            }
+        });
+        
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && userInput.value.trim()) {
+                addUserMessage(userInput.value.trim());
+            }
+        });
+
+        // Model selector functionality
+        const modelSelect = document.querySelector('select[name="models"]');
+        modelSelect.addEventListener('change', (e) => {
+            // In a real app, this would change the AI model being used
+            const selectedModel = e.target.value;
+            if (selectedModel) {
+                addBotMessage(`AI model changed to: ${e.target.options[e.target.selectedIndex].text}`);
+            }
+        });
+
+        function addBotMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message bot-message animate__animated animate__fadeIn';
+            messageDiv.innerHTML = `<p><i class="fas fa-info-circle"></i> ${text}</p>`;
+            chatBody.appendChild(messageDiv);
+            scrollToBottom();
+        }
+
+          // Model advantages data
+  const modelAdvantages = {
+    "lstm": {
+      title: "LSTM Neural Network",
+      advantages: [
+        "Excellent for processing sequential data like symptom progression",
+        "Maintains memory of previous inputs in conversation",
+        "Good at recognizing patterns in symptom combinations",
+        "Works well with time-series health data"
+      ]
+    },
+    "adabost": {
+      title: "AdaBoost Classifier",
+      advantages: [
+        "Highly accurate for classification tasks",
+        "Resistant to overfitting",
+        "Works well with smaller datasets",
+        "Fast prediction times"
+      ]
+    },
+    "rand_forest": {
+      title: "Random Forest",
+      advantages: [
+        "Handles mixed data types well",
+        "Provides feature importance scores",
+        "Robust against noisy medical data",
+        "Good for preliminary symptom screening"
+      ]
+    },
+    "bert": {
+      title: "BERT (Advanced NLP)",
+      advantages: [
+        "Understands natural language descriptions",
+        "Captures context in patient descriptions",
+        "Pre-trained on medical literature",
+        "Excels at symptom interpretation"
+      ]
+    }
+  };
+
+  // Modal elements
+  const modelInfoBtn = document.getElementById('modelInfoBtn');
+  const modelModal = document.getElementById('modelModal');
+  const closeModal = document.getElementById('closeModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalAdvantages = document.getElementById('modalAdvantages');
+
+
+  // Show modal with model info
+  modelInfoBtn.addEventListener('click', () => {
+    const selectedModel = modelSelect.value;
+    
+    if (selectedModel && selectedModel !== "") {
+      const modelData = modelAdvantages[selectedModel];
+      modalTitle.textContent = modelData.title;
+      
+      let advantagesHTML = `<p><strong>Advantages for medical diagnosis:</strong></p><ul>`;
+      modelData.advantages.forEach(adv => {
+        advantagesHTML += `<li>${adv}</li>`;
+      });
+      advantagesHTML += `</ul>`;
+      
+      modalAdvantages.innerHTML = advantagesHTML;
+    } else {
+      modalTitle.textContent = "No Model Selected";
+      modalAdvantages.innerHTML = "<p>Please select a model first to view its advantages.</p>";
+    }
+    
+    modelModal.style.display = "flex";
+  });
+
+  // Close modal
+  closeModal.addEventListener('click', () => {
+    modelModal.style.display = "none";
+  });
+
+  // Close when clicking outside modal
+  modelModal.addEventListener('click', (e) => {
+    if (e.target === modelModal) {
+      modelModal.style.display = "none";
+    }
+  });
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosify.ai - AI-Powered Healthcare Diagnostics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/styleindex.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+   
+            <i class="fas fa-robot "></i>Diagnosify<span>.ai</span></a>
+            <div class="menu-icon" id="menuToggle">☰</div>
+        </nav>
+    
+        <div class="menu-overlay" id="menuOverlay"></div>
+    
+        <div class="menu-content" id="menuContent">
+            <div class="close-menu" id="closeMenu">×</div>
+            <a href="/"><i class="fas fa-home"></i> Home</a>
+            <a href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="{{ url_for('about') }}" ><i class="fas fa-info-circle"></i> About</a>
+            <a href="{{ url_for('interface') }}"><i class="fas fa-stethoscope"></i> Services</a>
+            
+        </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Precision Diagnostics <span>Powered by AI</span></h1>
+                <p>Revolutionizing healthcare with our cutting-edge artificial intelligence platform that delivers accurate, real-time diagnostic insights for medical professionals and patients worldwide.</p>
+                <div class="cta-buttons">
+                 <a href="/login" class="btn btn-primary">Get Started</a>
+
+                    <a href="{{ url_for('about') }}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/static/images/sidebgg.png" alt="Robot Doctor" style="width: 450px;">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-title">
+            <h2>Why Choose Diagnosify.ai</h2>
+            <p>Our platform combines the latest advancements in artificial intelligence with medical expertise to deliver unparalleled diagnostic accuracy</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Instant Analysis</h3>
+                <p>Get real-time diagnostic suggestions with our AI that processes medical data 100x faster than traditional methods.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Proven Accuracy</h3>
+                <p>98.7% diagnostic accuracy rate validated by clinical trials across multiple medical specialties.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure & Private</h3>
+                <p>HIPAA-compliant platform with end-to-end encryption ensuring complete patient data confidentiality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>2M+</h3>
+                <p>Diagnoses Assisted</p>
+            </div>
+            <div class="stat-item">
+                <h3>98.7%</h3>
+                <p>Accuracy Rate</p>
+            </div>
+            <div class="stat-item">
+                <h3>15+</h3>
+                <p>Medical Specialties</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Availability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Diagnostic Process?</h2>
+            <p>Join thousands of healthcare professionals already benefiting from our AI-powered diagnostic platform.</p>
+            <a href="{{ url_for('login') }}" class="btn btn-primary">Start Free Trial</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Diagnosify.ai</h3>
+                <p>Precision healthcare diagnostics powered by artificial intelligence and machine learning technologies.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="{{url_for('home')}}">Home</a>
+                <a href="{{url_for('about')}}">About Us</a>
+                <a href="{{url_for('login')}}">Login</a>
+            </div>
+           
+            <div class="footer-column">
+                <h3>Contact</h3>
+
+                <p><i class="fas fa-phone"></i> (800) 555-HEALTH</p>
+                <p><i class="fas fa-envelope"></i> info@diagnosify.ai</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Diagnosify.ai. All rights reserved. </p>
+        </div>
+    </footer>
+
+
+    
+    <script>
+        // Menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const menuContent = document.getElementById('menuContent');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Toggle menu
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+            menuContent.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close menu when clicking overlay
+        menuOverlay.addEventListener('click', () => {
+            closeMenuFunction();
+        });
+
+        // Close menu when clicking X button
+        closeMenu.addEventListener('click', () => {
+            closeMenuFunction();
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenuFunction();
+            }
+        });
+
+        function closeMenuFunction() {
+            menuOverlay.classList.remove('active');
+            menuContent.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close menu when clicking on a menu item
+        const menuItems = document.querySelectorAll('.menu-content a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                closeMenuFunction();
+            });
+        });
+    </script>
+</body>
+</html>

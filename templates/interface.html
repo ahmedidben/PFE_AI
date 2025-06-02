@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Diagnosis Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --sky-blue: #e0f7fa;
+      --dark-blue: #0288d1;
+      --white: #ffffff;
+      --user-msg: #d0f0fd;
+      --bot-msg: #f1faff;
+      --font-main: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    nav {
+      width: 100%;
+      background-color: var(--dark-blue);
+      color: white;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .profile-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .app-container {
+      display: flex;
+      flex: 1;
+      margin-top: 58px;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: var(--sky-blue);
+      padding: 20px;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar h3 {
+      margin: 0 0 10px;
+      color: var(--dark-blue);
+    }
+
+    .sidebar button {
+      padding: 10px;
+      font-size: 1rem;
+      background: var(--dark-blue);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .sidebar .history-item {
+      background: var(--white);
+      padding: 8px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .sidebar .history-item:hover {
+      background: #d7f3f7;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      overflow: hidden;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--dark-blue);
+      margin: 10px 0 20px;
+    }
+
+    .chat-box {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      background: var(--white);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 12px 16px;
+      margin: 8px 0;
+      border-radius: 18px;
+      line-height: 1.5;
+      font-size: 1rem;
+      position: relative;
+      animation: fadeIn 0.3s ease-in-out;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background-color: var(--user-msg);
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .bot {
+      background-color: var(--bot-msg);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .message-time {
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 4px;
+    }
+
+    .prediction-item {
+      background-color: #ffffff;
+      border-left: 4px solid #4caf50;
+      padding: 10px 14px;
+      border-radius: 10px;
+      margin-top: 8px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+    .confidence-bar {
+      height: 6px;
+      background-color: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .confidence-fill {
+      height: 100%;
+      background-color: #4caf50;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    #chat-form {
+      display: flex;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    #model-select, #user-input {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    #model-select {
+      flex: 1;
+      min-width: 120px;
+    }
+
+    #user-input {
+      flex: 3;
+      min-width: 0;
+    }
+
+    button {
+      background-color: var(--dark-blue);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #026aa7;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      .sidebar {
+        position: fixed;
+        top: 58px;
+        left: 0;
+        bottom: 0;
+        z-index: 5;
+        transform: translateX(-100%);
+      }
+
+      .sidebar.active {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #chat-form {
+        flex-direction: column;
+      }
+
+      #model-select, #user-input {
+        width: 100%;
+      }
+
+      .message {
+        max-width: 85%;
+      }
+
+      nav {
+        padding: 14px 15px;
+      }
+
+      .main {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 12px 10px;
+      }
+
+      .main {
+        padding: 10px;
+      }
+
+      .chat-box {
+        padding: 15px;
+      }
+
+      .message {
+        max-width: 90%;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+      }
+
+      button {
+        padding: 10px 15px;
+      }
+
+      .prediction-item {
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <div>🩺 Medical Diagnosis Assistant</div>
+    <div class="profile-icon">👤</div>
+  </nav>
+
+  <div class="app-container">
+    <div class="sidebar" id="sidebar">
+      <h3>History</h3>
+      <button onclick="resetChat()">+ New Chat</button>
+      <div id="history"></div>
+    </div>
+
+    <div class="main">
+      <h2>🤖 Medical Diagnosis Assistant</h2>
+      <div class="chat-box" id="chat-box">
+        <div class="message bot">Hi! Describe your symptoms, and I'll help identify possible conditions.</div>
+      </div>
+      <form id="chat-form">
+        <select id="model-select" required>
+          <option value="" disabled selected>Choose a model</option>
+          <option value="ensemble">Ensemble (Best)</option>
+          <option value="biobert">BioBERT</option>
+          <option value="mlp">MLP</option>
+          <option value="TextCNN">TextCNN</option>
+          <option value="BiLSTM">BiLSTM</option>
+
+          <option value="adaboost">AdaBoost</option>
+          <option value="random_forest">Random Forest</option>
+          <option value="RNN">RNN</option>
+          <option value="gradient_boost">Gradient Boost</option>
+        </select>
+        <input type="text" id="user-input" placeholder="e.g., headache and nausea..." required/>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+<script>
+  const chatbotResponses = {
+    "greetings": [
+      "Hello! How can I assist you with your health today?",
+      "Hi! Tell me about your symptoms, and I'll try to help.",
+      "Greetings! What health concerns do you have?"
+    ],
+    "farewells": [
+      "Take care! Stay healthy!",
+      "Goodbye! Wishing you good health.",
+      "See you soon! Don't hesitate to reach out again."
+    ],
+    "thank_you": [
+      "You're welcome! Let me know if you need anything else.",
+      "Glad I could help!",
+      "Anytime! Stay safe."
+    ],
+    "fallback": [
+      "Sorry, I didn't understand that. Could you please describe your symptoms again?",
+      "I'm not sure about that. Can you give me more details?",
+      "Apologies, I don't have information on that right now."
+    ],
+    "small_talk": {
+      "how_are_you": [
+        "I'm doing well, thanks! How about you?",
+        "I'm here to assist you 24/7!",
+        "Feeling ready to help you with your health questions!"
+      ],
+      "what_is_your_name": [
+        "I'm MedBot, your health assistant.",
+        "You can call me MedBot.",
+        "I'm your friendly symptom checker bot."
+      ]
+    }
+  };
+
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('user-input');
+  const modelSelect = document.getElementById('model-select');
+  const chatBox = document.getElementById('chat-box');
+  const historyContainer = document.getElementById('history');
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const history = [];
+
+  const timestamp = () => {
+    const now = new Date();
+    return `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+  };
+
+  const addMessage = (text, isUser = true) => {
+    const message = document.createElement('div');
+    message.className = `message ${isUser ? 'user' : 'bot'}`;
+    message.innerHTML = `${text}<div class="message-time">${timestamp()}</div>`;
+    chatBox.appendChild(message);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  };
+
+  const displayBotResponse = (data) => {
+    let responseHTML = `<p>Here are possible conditions:</p>`;
+    data.top_k_predictions.forEach(pred => {
+      responseHTML += `
+        <div class="prediction-item">
+          <strong>${pred.disease}</strong>
+          <div>Confidence: ${pred.confidence}%</div>
+          <div class="confidence-bar">
+            <div class="confidence-fill" style="width: ${pred.confidence}%"></div>
+          </div>
+        </div>`;
+    });
+    addMessage(responseHTML, false);
+  };
+
+  const classifyIntent = (text) => {
+    const lc = text.toLowerCase();
+    if (/^(hi|hello|hey|greetings)\b/.test(lc)) return 'greetings';
+    if (/bye|goodbye|see you|take care/.test(lc)) return 'farewells';
+    if (/thank|thanks/.test(lc)) return 'thank_you';
+    if (/how are you/.test(lc)) return 'small_talk.how_are_you';
+    if (/your name|who are you/.test(lc)) return 'small_talk.what_is_your_name';
+    return null;
+  };
+
+  const getBotReply = (intent) => {
+    const parts = intent.split('.');
+    let replies = chatbotResponses;
+    for (const part of parts) {
+      replies = replies[part];
+    }
+    return replies[Math.floor(Math.random() * replies.length)];
+  };
+
+  form.onsubmit = async (e) => {
+    e.preventDefault();
+    const userText = input.value.trim();
+    const selectedModel = modelSelect.value;
+    if (!userText || !selectedModel) return;
+
+    input.value = "";
+    addMessage(userText);
+
+    // Check for small talk
+    const intent = classifyIntent(userText);
+    if (intent) {
+      const reply = getBotReply(intent);
+      addMessage(reply, false);
+      return;
+    }
+
+    addMessage(`Analyzing with ${selectedModel} model...`, false);
+
+    const res = await fetch("/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: userText, model: selectedModel })
+    });
+
+    const data = await res.json();
+    const loadingMsg = [...chatBox.querySelectorAll('.bot')].pop();
+    loadingMsg.remove();
+
+    if (data.error) {
+      addMessage(`❌ Error: ${data.error}`, false);
+    } else if (data.top_k_predictions) {
+      displayBotResponse(data);
+      saveToHistory(userText, data);
+    }
+  };
+
+  const saveToHistory = (text, responseData) => {
+    const id = history.length;
+    history.push({ text, data: responseData });
+    const item = document.createElement('div');
+    item.className = "history-item";
+    item.textContent = text;
+    item.onclick = () => loadHistory(id);
+    historyContainer.appendChild(item);
+  };
+
+  const loadHistory = (id) => {
+    const entry = history[id];
+    if (!entry) return;
+    resetChat(false);
+    addMessage(entry.text);
+    displayBotResponse(entry.data);
+    closeSidebar();
+  };
+
+  const resetChat = (clearHistory = true) => {
+    chatBox.innerHTML = `<div class="message bot">Hi! Describe your symptoms, and I'll help identify possible conditions.</div>`;
+    input.value = "";
+    if (clearHistory) {
+      history.length = 0;
+      historyContainer.innerHTML = "";
+    }
+  };
+
+  const toggleSidebar = () => {
+    sidebar.classList.toggle('active');
+  };
+
+  const closeSidebar = () => {
+    sidebar.classList.remove('active');
+  };
+
+  // Close sidebar when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && e.target !== menuToggle) {
+      closeSidebar();
+    }
+  });
+
+  menuToggle.addEventListener('click', toggleSidebar);
+  window.onload = () => input.focus();
+</script>
+
+</body>
+</html>

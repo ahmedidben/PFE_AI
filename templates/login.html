@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosify.ai - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/stylelogin.css">
+    <link rel="stylesheet" href="/static/styleindex.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}" class="logo"> <i class="fas fa-robot "></i>Diagnosify<span>.ai</span></a>
+        <div class="menu-icon" id="menuToggle">☰</div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="menu-content" id="menuContent">
+        <div class="close-menu" id="closeMenu">×</div>
+        <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a>
+        <a href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="{{ url_for('about') }}"><i class="fas fa-info-circle"></i> About</a>
+        <a href="{{ url_for('interface') }}l"><i class="fas fa-stethoscope"></i> Services</a>
+      
+    </div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h1 class="login-title">Welcome Back</h1>
+            <p class="login-subtitle">Sign in to your account</p>
+            {% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+            <form action="{{ url_for('login') }}" method="POST">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required name="username">
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required name="password">
+                </div>
+                
+               <button type="submit" class="login-btn">Sign In</button>
+
+                <a href="#" class="forgot-password">Forgot password?</a>
+                
+                <div class="divider">
+                    <span class="divider-text">OR CONTINUE WITH</span>
+                </div>
+                
+                <div class="social-login">
+                    <div class="social-btn google">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-btn apple">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                </div>
+                
+                <p class="signup-link">Don't have an account? <a href="{{url_for('signup')}}">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Diagnosify.ai</h3>
+                <p>Precision healthcare diagnostics powered by artificial intelligence and machine learning technologies.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="{{url_for('home')}}">Home</a>
+                <a href="{{url_for('about')}}">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Research</a>
+                <a href="{{url_for('login')}}">Login</a>
+            </div>
+           
+            <div class="footer-column">
+                <h3>Contact</h3>
+
+                <p><i class="fas fa-phone"></i> (800) 555-HEALTH</p>
+                <p><i class="fas fa-envelope"></i> info@diagnosify.ai</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Diagnosify.ai. All rights reserved. </p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const menuContent = document.getElementById('menuContent');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Toggle menu
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+            menuContent.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        // Close menu when clicking overlay
+        menuOverlay.addEventListener('click', () => {
+            closeMenuFunction();
+        });
+
+        // Close menu when clicking X button
+        closeMenu.addEventListener('click', () => {
+            closeMenuFunction();
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenuFunction();
+            }
+        });
+
+        function closeMenuFunction() {
+            menuOverlay.classList.remove('active');
+            menuContent.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        // Close menu when clicking on a menu item (optional)
+        const menuItems = document.querySelectorAll('.menu-content a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                closeMenuFunction();
+            });
+        });
+    </script>
+</body>
+</html>
